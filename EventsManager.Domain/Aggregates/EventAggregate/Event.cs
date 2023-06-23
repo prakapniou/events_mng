@@ -1,12 +1,11 @@
 ﻿namespace EventsManager.Domain.Aggregates.EventAggregate;
 
-public sealed class Event:Entity
+public sealed class Event:AppEntity
 {
     private readonly DateTime _created;
     private readonly List<Speaker> _speakers;
     private readonly List<Sponsor> _sponsors;
 
-    public string? Name { get; set; }
     public string? Topic { get; set; }
     public string? Description { get; set; }
     public string? Schedule { get; set; }
