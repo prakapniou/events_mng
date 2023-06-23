@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventsManagerApi", "EventsM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsManager.Domain", "EventsManager.Domain\EventsManager.Domain.csproj", "{2F651038-7E17-4710-9B97-D04E04A06A2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsManager.Application", "EventsManager.Application\EventsManager.Application.csproj", "{1A5FB6F4-B3C7-41DD-A4BF-EE2CF5DB59DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,19 @@ Global
 		{2F651038-7E17-4710-9B97-D04E04A06A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F651038-7E17-4710-9B97-D04E04A06A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F651038-7E17-4710-9B97-D04E04A06A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5FB6F4-B3C7-41DD-A4BF-EE2CF5DB59DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5FB6F4-B3C7-41DD-A4BF-EE2CF5DB59DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5FB6F4-B3C7-41DD-A4BF-EE2CF5DB59DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5FB6F4-B3C7-41DD-A4BF-EE2CF5DB59DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2F651038-7E17-4710-9B97-D04E04A06A2C} = {3A03EE99-445A-4822-8699-2E3E168F9C6E}
+		{1A5FB6F4-B3C7-41DD-A4BF-EE2CF5DB59DE} = {3A03EE99-445A-4822-8699-2E3E168F9C6E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {331DE4E3-895E-40D7-8124-F2B488C48597}
 	EndGlobalSection
 EndGlobal
