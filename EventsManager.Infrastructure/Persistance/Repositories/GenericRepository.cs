@@ -29,7 +29,7 @@ public abstract class GenericRepository<TEntity>:IGenericRepository<TEntity> whe
         return result!;
     }
 
-    public virtual async Task<TEntity> CreateAsync(TEntity model)
+    public async Task<TEntity> CreateAsync(TEntity model)
     {
         var result = _dbSet.Entry(model);
         result.State = EntityState.Added;
@@ -37,7 +37,7 @@ public abstract class GenericRepository<TEntity>:IGenericRepository<TEntity> whe
         return result.Entity;
     }
 
-    public virtual async Task<TEntity> UpdateAsync(TEntity model)
+    public async Task<TEntity> UpdateAsync(TEntity model)
     {
         var result = _dbSet.Entry(model);
         result.State = EntityState.Modified;
