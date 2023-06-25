@@ -1,6 +1,6 @@
-﻿namespace EventsManager.Infrastructure.EF.ModelConfigs;
+﻿namespace EventsManager.Infrastructure.Persistance.EF.ModelConfigs;
 
-internal sealed class SponsorModelConfig:IEntityTypeConfiguration<Sponsor>
+internal sealed class SponsorModelConfig : IEntityTypeConfiguration<Sponsor>
 {
     public void Configure(EntityTypeBuilder<Sponsor> builder)
     {

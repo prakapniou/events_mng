@@ -1,4 +1,4 @@
-﻿namespace EventsManager.Infrastructure.EF.ModelConfigs;
+﻿namespace EventsManager.Infrastructure.Persistance.EF.ModelConfigs;
 
 internal sealed class SpeakerModelConfig : IEntityTypeConfiguration<Speaker>
 {

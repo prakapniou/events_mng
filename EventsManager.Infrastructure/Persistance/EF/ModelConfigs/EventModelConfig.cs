@@ -1,6 +1,6 @@
-﻿namespace EventsManager.Infrastructure.EF.ModelConfigs;
+﻿namespace EventsManager.Infrastructure.Persistance.EF.ModelConfigs;
 
-internal sealed class EventModelConfig: IEntityTypeConfiguration<Event>
+internal sealed class EventModelConfig : IEntityTypeConfiguration<Event>
 {
     public void Configure(EntityTypeBuilder<Event> builder)
     {

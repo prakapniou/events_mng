@@ -1,4 +1,6 @@
-﻿namespace EventsManager.Infrastructure.EF.Contexts;
+﻿using EventsManager.Infrastructure.Persistance.EF.ModelConfigs;
+
+namespace EventsManager.Infrastructure.Persistance.EF.Contexts;
 
 public sealed class AppDbContext : DbContext
 {

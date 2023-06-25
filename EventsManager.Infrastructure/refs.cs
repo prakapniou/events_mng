@@ -3,4 +3,7 @@ global using EventsManager.Domain.Aggregates.EventAggregate;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using EventsManager.Domain.Aggregates.SpeakerAggregate;
 global using EventsManager.Domain.Aggregates.SponsorAggregate;
-global using EventsManager.Infrastructure.EF.ModelConfigs;
+global using EventsManager.Domain.Main;
+global using System.Linq.Expressions;
+global using EventsManager.Infrastructure.Persistance.EF.Contexts;
+global using EventsManager.Infrastructure.Persistance.EF.ModelConfigs;
