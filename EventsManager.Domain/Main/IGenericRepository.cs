@@ -12,7 +12,9 @@ public interface IGenericRepository<TEntity> where TEntity : IAggregateRoot
 
     public Task<bool> DeleteByAsync(Expression<Func<TEntity, bool>> expression);
 
+    public void Attach(Entity entity);
+
     public Task<bool> IsContains(Expression<Func<TEntity, bool>>? expression = null);
 
-    public string GetModelType();
+    public string GetEntityType();
 }

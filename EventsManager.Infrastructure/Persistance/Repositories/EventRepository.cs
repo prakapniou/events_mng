@@ -14,7 +14,6 @@ public sealed class EventRepository : GenericRepository<Event>, IEventRepository
         IQueryable<Event> query = _context.Events;
         query = expression is null ? query : query.Where(expression);
         query=query.Include(_ => _.Speakers).Include(_=>_.Sponsors);
-        query = query.OrderBy(_ => _.Spending).AsNoTracking();
         var result = await query.AsSplitQuery().ToListAsync();
         return result;
     }
@@ -27,11 +26,6 @@ public sealed class EventRepository : GenericRepository<Event>, IEventRepository
         var result = await query.AsSplitQuery().FirstOrDefaultAsync();
 
         return result!;
-    }
-
-    public void Attach(Event entity)
-    {
-        _context.Attach(entity);
     }
 
     public void SetValues(Event currentState, Event editState)

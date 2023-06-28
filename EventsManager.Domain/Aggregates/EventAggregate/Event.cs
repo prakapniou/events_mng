@@ -12,8 +12,8 @@ public sealed class Event:AppEntity
     public string? Address { get; set; }
     public DateTime Spending { get; set; }
     public DateTime Created => _created;
-    public IReadOnlyCollection<Speaker> Speakers => _speakers;
-    public IReadOnlyCollection<Sponsor> Sponsors => _sponsors;
+    public ICollection<Speaker> Speakers => _speakers;
+    public ICollection<Sponsor> Sponsors => _sponsors;
 
     public Event()
     {

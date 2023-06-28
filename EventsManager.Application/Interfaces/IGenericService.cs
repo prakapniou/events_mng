@@ -1,8 +1,8 @@
 ﻿namespace EventsManager.Application.Interfaces;
 
-internal interface IGenericService<TDTO> where TDTO : IBaseDTO
+public interface IGenericService<TDTO> where TDTO : IBaseDTO
 {
-    public Task<IEnumerable<TDTO>> GetAsync();
+    public Task<IEnumerable<TDTO>> GetAllAsync();
 
     public Task<TDTO> GetByIdAsync(Guid id);
 

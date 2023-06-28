@@ -20,11 +20,14 @@ public abstract class GenericRepository<TEntity>:IGenericRepository<TEntity> whe
     }
 
     public virtual async Task<TEntity> GetOneByAsync(
-        Expression<Func<TEntity, bool>>? expression = null)
+        Expression<Func<TEntity, bool>>? expression)
     {
         IQueryable<TEntity> query = _dbSet;
-        query = expression is null ? query : query.Where(expression); 
-        var result = await query.AsSplitQuery().FirstOrDefaultAsync();
+        query = expression is null ? query : query.Where(expression);
+        var result = await query            
+            .AsSplitQuery()
+            .AsNoTracking()
+            .FirstOrDefaultAsync();
 
         return result!;
     }
@@ -53,13 +56,18 @@ public abstract class GenericRepository<TEntity>:IGenericRepository<TEntity> whe
         return result;
     }
 
+    public void Attach(Entity entity)
+    {
+        _context.Attach(entity);
+    }
+
     public async Task<bool> IsContains(Expression<Func<TEntity, bool>>? expression = null)
     {
         var result = await _dbSet.AnyAsync(expression!);
         return result;
     }
 
-    public string GetModelType() => typeof(TEntity).Name;
+    public string GetEntityType() => typeof(TEntity).Name;
         
     private async Task SaveDbChangesAsync()
     {
