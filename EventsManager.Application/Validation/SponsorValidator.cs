@@ -1,6 +1,6 @@
 ﻿namespace EventsManager.Application.Validation;
 
-internal class SponsorValidator:AbstractValidator<Sponsor>
+public sealed class SponsorValidator:AbstractValidator<SponsorDTO>
 {
     public SponsorValidator()
     {

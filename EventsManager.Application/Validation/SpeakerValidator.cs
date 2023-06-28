@@ -1,6 +1,6 @@
 ﻿namespace EventsManager.Application.Validation;
 
-public sealed class SpeakerValidator:AbstractValidator<Speaker>
+public sealed class SpeakerValidator:AbstractValidator<SpeakerDTO>
 {
     public SpeakerValidator()
     {
